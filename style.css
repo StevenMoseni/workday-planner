@@ -3,3 +3,28 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1;
 }
+
+textarea {
+    color: black;
+    border: none;
+    border-left: 2px dotted blue;
+    resize: none;
+    padding: 5px;
+}
+
+.jumbotron {
+    color: cornflowerblue;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 0;
+    border-bottom: 9px solid black;
+}
+
+.time-block {
+    text-align: center;
+    border-radius: 15px;
+}
+
+.description {
+    white-space: pre-wrap;
+}
