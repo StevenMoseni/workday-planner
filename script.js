@@ -1,4 +1,12 @@
- $("#hour-1 .description").val(localStorage.getItem("hour-1"));
+$(document).ready(function() {
+    $(".saveBtn").on("click", function() {
+        var value = $(this).siblings(".description").val();
+        console.log(value);
+        var time = $(this).
+    }
+}
+
+$("#hour-1 .description").val(localStorage.getItem("hour-1"));
  $("#hour-2 .description").val(localStorage.getItem("hour-2"));
  $("#hour-3 .description").val(localStorage.getItem("hour-3"));
  $("#hour-4 .description").val(localStorage.getItem("hour-4"));
