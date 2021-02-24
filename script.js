@@ -1,12 +1,35 @@
 $(document).ready(function() {
     $(".saveBtn").on("click", function() {
         var value = $(this).siblings(".description").val();
-        console.log(value);
-        var time = $(this).
-    }
-}
+        // console.log(value);
+        var time = $(this).parent().attr("id");
+        // console.log(value)
+        localStorage.setItem(time, value);
 
-$("#hour-1 .description").val(localStorage.getItem("hour-1"));
+    });
+
+    function hourUpdater () {
+        var currentHour = moment().hours();
+
+        $(".time-block").each(function() {
+            var blockHour = parseInt($(this).attr("id").split("-")[1]);
+
+            if(blockHour < currentHour) {
+                $(this).addClass("past");
+            }    
+            else if (blockHour === currentHour) {
+                $(this).removeClass("past");
+                $(this).addClass("present");
+            }
+            else {
+                $(this).removeClass("past");
+                $(this).removeClass("past");
+                $(this).removeClass("past");
+            }    
+
+
+
+ $("#hour-1 .description").val(localStorage.getItem("hour-1"));
  $("#hour-2 .description").val(localStorage.getItem("hour-2"));
  $("#hour-3 .description").val(localStorage.getItem("hour-3"));
  $("#hour-4 .description").val(localStorage.getItem("hour-4"));
