@@ -28,3 +28,32 @@ textarea {
 .description {
     white-space: pre-wrap;
 }
+
+.hour {
+    color: black;
+    background-color: cadetblue;
+    border-top: 1px dotted black;
+}
+
+.row {
+    white-space: pre-wrap;
+    border-top: 1px solid wheat;
+    height: 80px;
+}
+
+.past {
+    background-color: whitesmoke;
+    color: white;
+  }
+  
+  .present {
+    background-color: hsla(3, 69%, 38%, 0.904);
+    color: white;
+  }
+  
+  .future {
+    background-color: blue;
+    color: white;
+  }
+
+  
