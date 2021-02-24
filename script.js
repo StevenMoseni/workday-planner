@@ -22,3 +22,6 @@
  $("#hour-17 .description").val(localStorage.getItem("hour-22"));
  $("#hour-17 .description").val(localStorage.getItem("hour-23"));
  $("#hour-17 .description").val(localStorage.getItem("hour-24"));
+
+ $("#presentDay").text(moment().format("dddd, MMMM Do"));
+
