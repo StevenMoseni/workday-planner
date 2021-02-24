@@ -1,11 +1,11 @@
 $(document).ready(function() {
     $(".saveBtn").on("click", function() {
+        
         var value = $(this).siblings(".description").val();
         // console.log(value);
         var time = $(this).parent().attr("id");
         // console.log(value)
         localStorage.setItem(time, value);
-
     });
 
     function hourUpdater () {
@@ -23,11 +23,15 @@ $(document).ready(function() {
             }
             else {
                 $(this).removeClass("past");
-                $(this).removeClass("past");
-                $(this).removeClass("past");
+                $(this).removeClass("present");
+                $(this).removeClass("future");
             }    
+        });    
+    }    
 
+    hourUpdater();
 
+    var interval = setInterval(hourUpdater, 15000);
 
  $("#hour-1 .description").val(localStorage.getItem("hour-1"));
  $("#hour-2 .description").val(localStorage.getItem("hour-2"));
@@ -56,3 +60,4 @@ $(document).ready(function() {
 
  $("#presentDay").text(moment().format("dddd, MMMM Do"));
 
+});
